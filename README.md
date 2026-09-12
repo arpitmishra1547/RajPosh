@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RajPosh
 
-## Getting Started
+RajPosh is a full-stack e-commerce web application built for showcasing and selling traditional Indian ethnic wear and jewellery.
 
-First, run the development server:
+The application provides a modern shopping experience with product collections, product details, cart and checkout functionality, user authentication, account management, and an admin interface for managing product images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+waiting for deployment..........
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## GitHub
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://github.com/arpitmishra1547/RajPosh
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Customer Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Browse products by category and subcategory
+- Dynamic product listing pages
+- Product detail pages
+- Product image gallery
+- Add products to cart
+- Update and remove cart items
+- Checkout flow
+- User registration and login
+- User profile/account management
+- Protected account functionality
+- Responsive design for desktop and mobile devices
 
-## Deploy on Vercel
+### Admin Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Admin product image upload interface
+- Upload multiple product images
+- Separate main and extra image groups
+- Product image organization by category and product slug
+- Automatic primary image selection
+- Cloudinary-based image storage
+- Product image management through API routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Authentication
+
+- User registration
+- User login
+- Password hashing using bcrypt
+- Authentication API routes
+- Protected user profile functionality
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- JavaScript
+- Tailwind CSS
+- GSAP
+- React Icons
+
+### Backend
+
+- Next.js App Router
+- Next.js API Routes
+- REST-style API endpoints
+
+### Database
+
+- PostgreSQL
+- Prisma ORM
+
+### Image Management
+
+- Cloudinary
+- Server-side image upload
+- Organized image storage structure
+
+### Tools
+
+- Git
+- GitHub
+- npm
+
+---
+
+## Application Architecture
+
+```text
+                    RajPosh
+                       |
+        +--------------+--------------+
+        |                             |
+    Customer                       Admin
+        |                             |
+   +----+----+                  Product Images
+   |         |                       |
+Products   Account               Upload API
+   |         |                       |
+Cart      Authentication          Cloudinary
+   |         |
+Checkout  User Profile
+   |
+Database
+   |
+PostgreSQL
+   |
+Prisma ORM
