@@ -1,0 +1,370 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Royal Georgette Saree with Gold Border",
+      "category": "Saree",
+      "subcategory": "Royal Georgette",
+      "price": 30000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg",
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg",
+        "/indian-bridal-wedding-lehenga-dress.jpg"
+      ],
+      "description": "Elegant royal georgette saree with intricate gold border detailing. Perfect for special occasions and weddings. Made with premium quality fabric that drapes beautifully.",
+      "inStock": true
+    },
+    {
+      "id": "2",
+      "title": "Chiffon Daily Wear Saree",
+      "category": "Saree",
+      "subcategory": "Chiffon",
+      "price": 15000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg",
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Comfortable chiffon saree perfect for daily wear. Lightweight and easy to drape with elegant patterns.",
+      "inStock": true
+    },
+    {
+      "id": "3",
+      "title": "Daily Wear Chiffon Saree",
+      "category": "Saree",
+      "subcategory": "Daily wear",
+      "price": 12000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Beautiful daily wear saree in soft chiffon fabric.",
+      "inStock": true
+    },
+    {
+      "id": "4",
+      "title": "Traditional Poshak Daily Wear",
+      "category": "Poshak",
+      "subcategory": "Daily wear",
+      "price": 8000,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Traditional Rajasthani poshak perfect for daily occasions. Comfortable and elegant.",
+      "inStock": true
+    },
+    {
+      "id": "5",
+      "title": "Party Wear Poshak Set",
+      "category": "Poshak",
+      "subcategory": "Party wear",
+      "price": 25000,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg",
+        "/collection-of-indian-ethnic-fashion-clothes.jpg"
+      ],
+      "description": "Stunning party wear poshak set with intricate embroidery and mirror work.",
+      "inStock": true
+    },
+    {
+      "id": "6",
+      "title": "Bridal Poshak Collection",
+      "category": "Poshak",
+      "subcategory": "Bridal",
+      "price": 50000,
+      "images": [
+        "/indian-bridal-wedding-lehenga-dress.jpg",
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Exquisite bridal poshak with heavy embroidery, zari work, and traditional motifs.",
+      "inStock": true
+    },
+    {
+      "id": "7",
+      "title": "Cotton Special Poshak",
+      "category": "Poshak",
+      "subcategory": "Cotton Special",
+      "price": 6000,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Comfortable cotton poshak perfect for summer wear. Breathable and stylish.",
+      "inStock": true
+    },
+    {
+      "id": "8",
+      "title": "Cotton Odhni",
+      "category": "Odhni",
+      "subcategory": "Cotton",
+      "price": 2000,
+      "images": [
+        "/traditional-odhni-dupatta-indian-fashion.jpg"
+      ],
+      "description": "Traditional cotton odhni with beautiful prints and patterns.",
+      "inStock": true
+    },
+    {
+      "id": "9",
+      "title": "Party Wear Odhni",
+      "category": "Odhni",
+      "subcategory": "Party wear",
+      "price": 5000,
+      "images": [
+        "/traditional-odhni-dupatta-indian-fashion.jpg"
+      ],
+      "description": "Elegant party wear odhni with sequins and embroidery work.",
+      "inStock": true
+    },
+    {
+      "id": "10",
+      "title": "Aad Set Gold Jewellery",
+      "category": "Jewellery",
+      "subcategory": "Aad Set",
+      "price": 45000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Traditional gold aad set with intricate designs and premium quality.",
+      "inStock": true
+    },
+    {
+      "id": "11",
+      "title": "Earring Set",
+      "category": "Jewellery",
+      "subcategory": "Earring",
+      "price": 15000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Beautiful traditional earring set with traditional motifs.",
+      "inStock": true
+    },
+    {
+      "id": "12",
+      "title": "Necklace Set",
+      "category": "Jewellery",
+      "subcategory": "Necklace",
+      "price": 35000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Elegant necklace set perfect for weddings and special occasions.",
+      "inStock": true
+    },
+    {
+      "id": "13",
+      "title": "Bor Traditional",
+      "category": "Jewellery",
+      "subcategory": "Bor",
+      "price": 8000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Traditional bor with intricate designs.",
+      "inStock": true
+    },
+    {
+      "id": "14",
+      "title": "Nath Set",
+      "category": "Jewellery",
+      "subcategory": "Nath",
+      "price": 12000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Beautiful nath set with traditional designs.",
+      "inStock": true
+    },
+    {
+      "id": "15",
+      "title": "Hathphool Set",
+      "category": "Jewellery",
+      "subcategory": "Hathphool",
+      "price": 18000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Elegant hathphool set for hands with traditional motifs.",
+      "inStock": true
+    },
+    {
+      "id": "16",
+      "title": "Jewellery Sets",
+      "category": "Jewellery",
+      "subcategory": "Sets",
+      "price": 60000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Complete jewellery set including necklace, earrings, and more.",
+      "inStock": true
+    },
+    {
+      "id": "17",
+      "title": "Bridal Jewellery Sets",
+      "category": "Jewellery",
+      "subcategory": "Bridal Sets",
+      "price": 100000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Premium bridal jewellery set with heavy gold work and precious stones.",
+      "inStock": true
+    },
+    {
+      "id": "18",
+      "title": "Royal Georgette Saree Premium",
+      "category": "Saree",
+      "subcategory": "Royal Georgette",
+      "price": 35000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Premium royal georgette saree with elaborate border work.",
+      "inStock": true
+    },
+    {
+      "id": "19",
+      "title": "Chiffon Party Saree",
+      "category": "Saree",
+      "subcategory": "Chiffon",
+      "price": 18000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Elegant chiffon saree perfect for parties and celebrations.",
+      "inStock": true
+    },
+    {
+      "id": "20",
+      "title": "Daily Wear Poshak Set",
+      "category": "Poshak",
+      "subcategory": "Daily wear",
+      "price": 7000,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Comfortable daily wear poshak set with modern designs.",
+      "inStock": true
+    },
+    {
+      "id": "21",
+      "title": "Premium Party Wear Poshak",
+      "category": "Poshak",
+      "subcategory": "Party wear",
+      "price": 30000,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Premium party wear poshak with heavy embroidery.",
+      "inStock": true
+    },
+    {
+      "id": "22",
+      "title": "Luxury Bridal Poshak",
+      "category": "Poshak",
+      "subcategory": "Bridal",
+      "price": 75000,
+      "images": [
+        "/indian-bridal-wedding-lehenga-dress.jpg"
+      ],
+      "description": "Luxury bridal poshak with extensive zari and embroidery work.",
+      "inStock": true
+    },
+    {
+      "id": "23",
+      "title": "Cotton Special Poshak Premium",
+      "category": "Poshak",
+      "subcategory": "Cotton Special",
+      "price": 8500,
+      "images": [
+        "/traditional-rajasthani-poshak-ethnic-wear.jpg"
+      ],
+      "description": "Premium cotton poshak with traditional prints.",
+      "inStock": true
+    },
+    {
+      "id": "24",
+      "title": "Traditional Cotton Odhni",
+      "category": "Odhni",
+      "subcategory": "Cotton",
+      "price": 2500,
+      "images": [
+        "/traditional-odhni-dupatta-indian-fashion.jpg"
+      ],
+      "description": "Traditional cotton odhni with hand block prints.",
+      "inStock": true
+    },
+    {
+      "id": "25",
+      "title": "Designer Party Odhni",
+      "category": "Odhni",
+      "subcategory": "Party wear",
+      "price": 6000,
+      "images": [
+        "/traditional-odhni-dupatta-indian-fashion.jpg"
+      ],
+      "description": "Designer party wear odhni with sequins and mirror work.",
+      "inStock": true
+    },
+    {
+      "id": "26",
+      "title": "Royal Georgette Saree Classic",
+      "category": "Saree",
+      "subcategory": "Royal Georgette",
+      "price": 28000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Classic royal georgette saree with elegant border.",
+      "inStock": true
+    },
+    {
+      "id": "27",
+      "title": "Chiffon Elegant Saree",
+      "category": "Saree",
+      "subcategory": "Chiffon",
+      "price": 16000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Elegant chiffon saree with beautiful prints.",
+      "inStock": true
+    },
+    {
+      "id": "28",
+      "title": "Daily Wear Saree Comfort",
+      "category": "Saree",
+      "subcategory": "Daily wear",
+      "price": 10000,
+      "images": [
+        "/beautiful-silk-saree-traditional-indian.jpg"
+      ],
+      "description": "Comfortable daily wear saree in soft fabric.",
+      "inStock": true
+    },
+    {
+      "id": "29",
+      "title": "Premium Aad Set",
+      "category": "Jewellery",
+      "subcategory": "Aad Set",
+      "price": 55000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Premium aad set with heavy gold work.",
+      "inStock": true
+    },
+    {
+      "id": "30",
+      "title": "Designer Earring Collection",
+      "category": "Jewellery",
+      "subcategory": "Earring",
+      "price": 20000,
+      "images": [
+        "/gold-indian-jewelry-ornaments-traditional.jpg"
+      ],
+      "description": "Designer earring collection with modern and traditional designs.",
+      "inStock": true
+    }
+  ]
+}
+

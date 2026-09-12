@@ -1,0 +1,186 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id          Int            @id @default(autoincrement())
+  name        String         @unique @db.VarChar(100)
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+  subcategories Subcategory[]
+  products    Product[]
+
+  @@map("categories")
+  @@index([name])
+}
+
+model Subcategory {
+  id          Int       @id @default(autoincrement())
+  categoryId  Int       @map("category_id")
+  name        String    @db.VarChar(100)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  category    Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  products    Product[]
+
+  @@unique([categoryId, name])
+  @@map("subcategories")
+  @@index([categoryId])
+  @@index([name])
+}
+
+model Product {
+  id            Int            @id @default(autoincrement())
+  categoryId    Int             @map("category_id")
+  subcategoryId Int             @map("subcategory_id")
+  name          String          @db.VarChar(255)
+  description   String?         @db.Text
+  price         Decimal         @db.Decimal(10, 2)
+  discountPrice Decimal?        @map("discount_price") @db.Decimal(10, 2)
+  stockQuantity Int             @default(0) @map("stock_quantity")
+  sizeOptions   String[]        @default([]) @map("size_options")
+  colorOptions  String[]        @default([]) @map("color_options")
+  sku           String          @unique @db.VarChar(100)
+  slug          String?         @db.VarChar(255)
+  createdAt     DateTime        @default(now()) @map("created_at")
+  updatedAt     DateTime        @updatedAt @map("updated_at")
+  category      Category        @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  subcategory   Subcategory     @relation(fields: [subcategoryId], references: [id], onDelete: Cascade)
+  images        ProductImage[]
+
+  @@map("products")
+  @@index([categoryId])
+  @@index([subcategoryId])
+  @@index([name])
+  @@index([sku])
+  @@index([price])
+}
+
+model ProductImage {
+  id          Int      @id @default(autoincrement())
+  productId   Int      @map("product_id")
+  imageUrl    String   @map("image_url") @db.VarChar(500)
+  publicId    String?  @map("public_id") @db.VarChar(255)
+  type        ImageType @default(main)
+  isPrimary   Boolean  @default(false) @map("is_primary")
+  createdAt   DateTime @default(now()) @map("created_at")
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_images")
+  @@index([productId])
+  @@index([publicId])
+  @@index([productId, type])
+  @@index([productId, isPrimary])
+}
+
+enum ImageType {
+  main
+  extra
+}
+
+model Customer {
+  id          Int       @id @default(autoincrement())
+  fullName    String    @map("full_name") @db.VarChar(255)
+  email       String    @unique @db.VarChar(255)
+  phone       String?   @db.VarChar(20)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  address     String?   @db.Text
+  city        String?   @db.VarChar(100)
+  state       String?   @db.VarChar(100)
+  pincode     String?   @db.VarChar(10)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  cart        Cart?
+  orders      Order[]
+
+  @@map("customers")
+  @@index([email])
+  @@index([phone])
+}
+
+model Cart {
+  id         Int         @id @default(autoincrement())
+  customerId Int         @unique @map("customer_id")
+  createdAt  DateTime    @default(now()) @map("created_at")
+  updatedAt  DateTime    @updatedAt @map("updated_at")
+  customer   Customer    @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  items      CartItem[]
+
+  @@map("cart")
+  @@index([customerId])
+}
+
+model CartItem {
+  id        Int      @id @default(autoincrement())
+  cartId    Int      @map("cart_id")
+  productId Int      @map("product_id")
+  quantity  Int
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+
+  @@unique([cartId, productId])
+  @@map("cart_items")
+  @@index([cartId])
+  @@index([productId])
+}
+
+model Order {
+  id            Int            @id @default(autoincrement())
+  customerId    Int            @map("customer_id")
+  totalAmount   Decimal        @map("total_amount") @db.Decimal(10, 2)
+  paymentStatus PaymentStatus  @default(pending) @map("payment_status")
+  orderStatus   OrderStatus    @default(pending) @map("order_status")
+  shippingAddress String        @map("shipping_address") @db.Text
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+  customer      Customer        @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  items         OrderItem[]
+
+  @@map("orders")
+  @@index([customerId])
+  @@index([paymentStatus])
+  @@index([orderStatus])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id              Int      @id @default(autoincrement())
+  orderId         Int      @map("order_id")
+  productId       Int      @map("product_id")
+  quantity        Int
+  priceAtPurchase Decimal  @map("price_at_purchase") @db.Decimal(10, 2)
+  createdAt       DateTime @default(now()) @map("created_at")
+  order           Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_items")
+  @@index([orderId])
+  @@index([productId])
+}
+
+enum PaymentStatus {
+  pending
+  paid
+  failed
+  refunded
+}
+
+enum OrderStatus {
+  pending
+  processing
+  shipped
+  delivered
+  cancelled
+}
+
+
+
+
